@@ -5,6 +5,7 @@ const storage = multer.diskStorage({
     cb(null, "./storages/");
   },
   filename: (req, file, cb) => {
+    // eslint-disable-next-line no-unused-vars
     const [prefix] = file.mimetype.split("/");
     const filename = file.originalname.split(".");
     const extension = filename.pop();

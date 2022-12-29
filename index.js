@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+// eslint-disable-next-line no-unused-vars
 const port = 8000;
 const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
@@ -19,7 +21,6 @@ app.use(cors());
 
 // Import Midleware
 const middleware = require("./middlewares/auth");
-const { Connection } = require("pg");
 
 // API USER
 app.post("/auth/register", authController.registermember);
@@ -68,9 +69,8 @@ app.delete(
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // server setup
-// connection.sync();
-const server = app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server running at http://localhost:${process.env.PORT}`);
 });
 
 module.exports = { server, app };
