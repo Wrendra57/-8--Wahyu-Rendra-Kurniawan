@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const carRepository = require("../carsRepository");
 
 describe("create car", () => {

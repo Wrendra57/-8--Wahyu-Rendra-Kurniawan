@@ -42,7 +42,7 @@ describe("POST /auth/login", () => {
         UsersRepository.destroy({ id: createdUser.id });
         server.close();
       });
-  });
+  },60_000);
 });
 
 describe("POST /auth/register", () => {
@@ -66,7 +66,7 @@ describe("POST /auth/register", () => {
         // console.log(res._body.data.registered_user.id);
         UsersRepository.destroy({ id: res._body.data.registered_user.id });
       });
-  });
+  },);
 });
 
 describe("POST /auth/me", () => {
@@ -98,7 +98,7 @@ describe("POST /auth/me", () => {
 
         UsersRepository.destroy({ id: createdUser.id });
       });
-  });
+  },60_000);
 });
 
 describe("POST /auth/registeradmin", () => {
@@ -139,5 +139,5 @@ describe("POST /auth/registeradmin", () => {
         UsersRepository.destroy({ id: res._body.data.registered_user.id });
         UsersRepository.destroy({ id: createSuperAdmin.id });
       });
-  });
+  },60_000);
 });

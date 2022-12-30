@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const UsersRepository = require("../usersRepository");
 
 describe("create user", () => {

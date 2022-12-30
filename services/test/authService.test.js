@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const AuthService = require("../authService");
 
 describe("register", () => {
@@ -83,6 +84,7 @@ describe("Login", () => {
       .fn()
       .mockImplementation(() => Promise.resolve(expectedCreatedUserService));
 
+    // eslint-disable-next-line no-unused-vars
     const createdLoginResponse = await mockAuthService.login(userToLogin);
 
     // Assertion

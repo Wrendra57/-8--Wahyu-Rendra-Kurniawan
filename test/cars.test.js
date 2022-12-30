@@ -62,7 +62,7 @@ describe("POST /cars", () => {
         UsersRepository.destroy({ id: createSuperAdmin.id });
         server.close();
       });
-  });
+  }, 60_000);
 });
 
 describe("GET /cars", () => {
@@ -76,7 +76,7 @@ describe("GET /cars", () => {
         expect(res._body.data).not.toEqual(null);
       });
   });
-});
+}, 60_000);
 
 describe("GET /cars/id", () => {
   it("should response with 201 as status code", async () => {
@@ -108,7 +108,7 @@ describe("GET /cars/id", () => {
         carRepository.destroy({ id: res._body.data.id });
       });
   });
-});
+}, 60_000);
 
 describe("PUT /cars/id", () => {
   it("should response with 201 as status code", async () => {
@@ -165,7 +165,7 @@ describe("PUT /cars/id", () => {
         carRepository.destroy({ id: createCar.id });
         UsersRepository.destroy({ id: createSuperAdmin.id });
       });
-  });
+  }, 60_000);
 });
 
 describe("DELETE /cars/id", () => {
@@ -207,5 +207,5 @@ describe("DELETE /cars/id", () => {
         carRepository.destroy({ id: createCar.id });
         UsersRepository.destroy({ id: createSuperAdmin.id });
       });
-  });
+  }, 60_000);
 });
