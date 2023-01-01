@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1672375399972" clover="3.2.0">
-  <project timestamp="1672375399972" name="All files">
+<coverage generated="1672409632274" clover="3.2.0">
+  <project timestamp="1672409632275" name="All files">
     <metrics statements="1144" coveredstatements="798" conditionals="584" coveredconditionals="376" methods="234" coveredmethods="152" elements="1962" coveredelements="1326" complexity="0" loc="1144" ncloc="1144" packages="10" files="16" classes="16"/>
     <package name="[8]Wahyu Rendra Kurniwan">
       <metrics statements="76" coveredstatements="75" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
